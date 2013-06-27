@@ -18,7 +18,7 @@ Usage Examples
 
 (Brainstorming - wont compile...)
 
-'''Sql
+```Sql
 -- [Name(GetByMake)]
 -- [Namespace(Cars)]
 -- [Description(Get all cars by a specific make)]
@@ -26,9 +26,9 @@ SELECT C.Id, M.Name AS Make, C.Model
 FROM Car C
 INNER JOIN Make M ON C.MakeId = M.Id
 WHERE M.Name = @make
-'''
+```
 
-'''Csharp
+```csharp
 public partial class CarsQueries
 {
   private static string getByMakeSql = "";
@@ -37,9 +37,9 @@ public partial class CarsQueries
   {  
     ...
   }
-'''
+```
 
-'''Csharp
+```Csharp
 var cars = connection.Cars.GetByMake("BMW");
-'''
+```
 
